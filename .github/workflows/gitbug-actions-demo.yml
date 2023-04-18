@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "event: ${{ github.event.name }}"
+          echo "event: ${{ github.event_name }}"
           echo "branch: ${{ github.ref }}"
 
       - uses: actions/checkout@v3.3.0
