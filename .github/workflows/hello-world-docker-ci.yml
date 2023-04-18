@@ -13,7 +13,7 @@ jobs:
       - id: hello-action
         uses: ./hello-world-github-action
         with:
-          who-to-greet: "@sorbris"
+          who-to-greet: '@sorbris'
 
       - name: Output
         run: echo "The output is ${{ steps.hello-action.outputs.time }}"
