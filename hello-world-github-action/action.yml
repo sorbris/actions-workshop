@@ -1,1 +1,13 @@
 
+name: "testing testing"
+inputs:
+  who-to-greet:
+    description: "Who should I hello"
+    required: true
+    default: "World"
+ 
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{inputs.who-to-greet}}
