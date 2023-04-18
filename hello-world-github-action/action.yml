@@ -5,7 +5,11 @@ inputs:
     description: "Who should I hello"
     required: true
     default: "World"
- 
+
+outputs:
+  time:
+    description: "Time when executed"
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
