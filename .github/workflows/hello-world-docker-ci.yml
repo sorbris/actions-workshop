@@ -1,1 +1,18 @@
 name: "Testing the action"
+
+on:
+  push:
+    paths: ["hello-world-github-action"]
+  workflow_dispatch:
+
+jobs:
+  test-action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.3.0
+      - id: hello-action
+        uses: ./hello-world-docker-action
+        with:
+          who-to-greet: "@sorbris"
+      - name: Output
+        run: echo "The output is: ${{ steps.hello-action.outputs.time }}"
