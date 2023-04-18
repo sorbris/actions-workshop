@@ -16,4 +16,4 @@ jobs:
           who-to-greet: "@sorbris"
 
       - name: Output
-        run: echo "The output is: ${{ steps.hello-action.outputs.time }}"
+        run: echo "The output is ${{ steps.hello-action.outputs.time }}"
