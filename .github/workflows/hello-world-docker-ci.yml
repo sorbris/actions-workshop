@@ -14,5 +14,4 @@ jobs:
         uses: ./hello-world-docker-action
         with:
           who-to-greet: "@sorbris"
-      - name: Output
-        run: echo "The output is: ${{ steps.hello-action.outputs.time }}"
+
