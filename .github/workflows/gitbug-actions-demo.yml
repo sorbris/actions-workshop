@@ -32,13 +32,13 @@ jobs:
     runs-on: ubuntu-latest
     if: gitbug.event_name == 'workflow_dispatch'
     needs: Build
-    steps: |
+    steps:
       - run: echo "testing..."
   Load-Test:
     runs-on: ubuntu-latest
     needs: Build
     if: gitbug.event_name == 'workflow_dispatch'
-    steps: |
+    steps:
       - run: echo "Testing..."
   Production:
     needs: [Test, Load-Test]
